@@ -40,7 +40,6 @@ const scriptRegex = /<script\s+src="([^"]+)"\s*><\/script>/g;
 const linkTags = htmlContent.match(linkRegex);
 const scriptTags = htmlContent.match(scriptRegex);
 let styleSheetPaths = [];
-let scriptPaths = [];
 
 if (linkTags) {
     linkTags.forEach(linkTag => {
