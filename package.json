@@ -4,16 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-css": "tailwindcss -i ./styles.css -o ./src/styles.css",
-    "build-minicss": "tailwindcss -i ./styles.css -o ./src/styles.css --minify",
-    "build-prod": "tailwindcss -i ./styles.css -o ./dist/styles.css --minify && node build.js"
+    "build": "pkg -c package.json index.js"
   },
   "author": "",
-  "license": "ISC",
+  "license": "GPL-v3",
   "dependencies": {
     "autoprefixer": "^10.4.14",
+    "cssnano": "^6.0.0",
     "postcss-cli": "^10.1.0",
-    "tailwindcss": "^3.3.1",
-    "uglify-js": "^3.17.4"
+    "tailwindcss": "^3.3.1"
+  },
+  "devDependencies": {
+  },
+  "pkg": {
+    "scripts": [],
+    "outputPath": "dist",
+    "assets": [
+      "node_modules/tailwindcss/lib/css/**/*"
+    ],
+    "targets": [
+      "node14-win"
+    ]
   }
 }
