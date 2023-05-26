@@ -1,6 +1,6 @@
 # TailwindCompile
 Small application for compiling tailwind in minimal projects.
-I am currently using this for my circuitpython development process. Because the whole project is managed on the microcontroller itselfe (or mirror of it), I have a limited space-budget. So adding a full node environment with tailwind on there was out of the question. I now have a compaion application which builds the css for me and can be placed outside of the project. 
+I am currently using this for my circuitpython development process. Because the whole project is managed on the microcontroller itselfe (or mirror of it), I have a limited space-budget. So adding a full node environment with tailwind on there was out of the question. I now have a companion application which builds the css for me and can be placed outside of the project. 
 
 # Building the compiler
 run 

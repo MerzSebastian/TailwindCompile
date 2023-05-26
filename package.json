@@ -6,7 +6,7 @@
   "scripts": {
     "build": "pkg -c package.json index.js"
   },
-  "author": "",
+  "author": "Sebastian Merz",
   "license": "GPL-v3",
   "dependencies": {
     "autoprefixer": "^10.4.14",
