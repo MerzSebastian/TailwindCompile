@@ -24,7 +24,8 @@
       "node_modules/tailwindcss/lib/css/**/*"
     ],
     "targets": [
-      "node14-win"
+      "node16-win",
+      "node16-linux"
     ]
   }
 }
