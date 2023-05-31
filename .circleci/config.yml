@@ -7,7 +7,9 @@ jobs:
     steps:
       - checkout
       - run: npm install
-      - run: npm run build
+      - run: |
+          ls -la
+          npm run build
 
 workflows:
   build_and_publish:
