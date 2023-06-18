@@ -21,9 +21,6 @@ jobs:
           at: ./
       - run: cd dist && ls -la
       - run: 
-          name: Install jq
-          command: apt install jq -y
-      - run: 
           name: Install Github CLI
           command: |
             type -p curl >/dev/null || (apt update && apt install curl -y)
@@ -32,6 +29,9 @@ jobs:
             && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
             && apt update \
             && apt install gh -y
+      - run: 
+          name: Install jq
+          command: apt install jq -y
 
       - run: echo $(cat package.json | jq -r '.version')
 workflows:
