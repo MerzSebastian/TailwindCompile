@@ -34,9 +34,10 @@ jobs:
           command: apt install jq -y
 
       - run: |
-          version=$(cat package.json | jq -r '.version')
-          gh release create "$version" --title "Release"
+          export version=$(cat package.json | jq -r '.version')
+          gh release create ${version} --title "Release"
       - run: gh release upload $(cat package.json | jq -r '.version') ./dist/tailwindcompile-win.exe ./dist/tailwindcompile-linux
+
 workflows:
   build_and_publish:
     jobs:
