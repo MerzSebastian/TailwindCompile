@@ -6,6 +6,19 @@ jobs:
       - image: node:20-buster
     steps:
       - checkout
+      - run: npm install
+      - run: npm run build
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - ./dist
+  build:
+    docker:
+      - image: node:20-buster
+    steps:
+      - attach_workspace:
+          at: ./
+      - run: ls -la
       - run: |
           type -p curl >/dev/null || (apt update && apt install curl -y)
           curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
