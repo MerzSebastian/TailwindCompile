@@ -21,6 +21,9 @@ jobs:
           at: ./
       - run: cd dist && ls -la
       - run: 
+          name: Install jq
+          command: apt install jq -y
+      - run: 
           name: Install Github CLI
           command: |
             type -p curl >/dev/null || (apt update && apt install curl -y)
