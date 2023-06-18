@@ -6,7 +6,6 @@ jobs:
       - image: node:20-buster
     steps:
       - checkout
-      - run: apk add github-cli
       - run: npm install
       - run: npm run build
       - run: |
