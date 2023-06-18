@@ -18,7 +18,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ./
-      - run: ls -la
+      - run: cd dist && ls -la
       - run: |
           type -p curl >/dev/null || (apt update && apt install curl -y)
           curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
