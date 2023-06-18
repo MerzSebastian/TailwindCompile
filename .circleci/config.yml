@@ -6,7 +6,7 @@ jobs:
       - image: node:20-buster
     steps:
       - checkout
-      - run: npm install
+      - run: npm install --no-bin-links
       - run: npm run build
       - persist_to_workspace:
           root: ./
