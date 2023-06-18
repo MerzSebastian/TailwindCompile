@@ -7,6 +7,7 @@ jobs:
     steps:
       - checkout
       - run: npm install --no-bin-links
+      - run: npm install -g pkg
       - run: npm run build
       - persist_to_workspace:
           root: ./
